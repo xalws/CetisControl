@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "912963032866",
+    "project_id": "controlcetis",
+    "storage_bucket": "controlcetis.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912963032866:android:cdcaa66976248dbccdb77b",
+        "android_client_info": {
+          "package_name": "com.cetiscontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912963032866-cr1sicjuggtdcmg9e00i8lupktkfrrkb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cetiscontrol",
+            "certificate_hash": "6539ddcd41cf6a0dfebc119f56e1b2ad0937d564"
+          }
+        },
+        {
+          "client_id": "912963032866-3vt37i59pvvr4cg68acggjo0e2brcrq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCnCrfm6b61JmSDEEf1KqXL82gOdzE4a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912963032866-3vt37i59pvvr4cg68acggjo0e2brcrq0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
