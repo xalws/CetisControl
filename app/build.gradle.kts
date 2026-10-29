@@ -10,7 +10,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.cetiscontrol"
+        applicationId = "com.cetisasiste"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -43,10 +43,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
 
     // BOM de Firebase
-    implementation(platform("com.google.firebase:firebase-bom:34.19.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
 
     // Dependencias
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
     implementation("com.google.firebase:firebase-firestore")
 }

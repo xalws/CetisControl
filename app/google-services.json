@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "912963032866",
-    "project_id": "controlcetis",
-    "storage_bucket": "controlcetis.firebasestorage.app"
+    "project_number": "1030843858197",
+    "project_id": "cetiscontrol",
+    "storage_bucket": "cetiscontrol.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912963032866:android:cdcaa66976248dbccdb77b",
+        "mobilesdk_app_id": "1:1030843858197:android:aebe00bb5a83ede17ebd1c",
         "android_client_info": {
-          "package_name": "com.cetiscontrol"
+          "package_name": "com.cetisasiste"
         }
       },
       "oauth_client": [
         {
-          "client_id": "912963032866-cr1sicjuggtdcmg9e00i8lupktkfrrkb.apps.googleusercontent.com",
+          "client_id": "1030843858197-2ft9gk8e8b4i8l9n4a2ki5qkivl2pma0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.cetiscontrol",
+            "package_name": "com.cetisasiste",
             "certificate_hash": "6539ddcd41cf6a0dfebc119f56e1b2ad0937d564"
           }
         },
         {
-          "client_id": "912963032866-3vt37i59pvvr4cg68acggjo0e2brcrq0.apps.googleusercontent.com",
+          "client_id": "1030843858197-j8rul1hec3hcnggh8b5u1p5sceer0g5q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCCnCrfm6b61JmSDEEf1KqXL82gOdzE4a0"
+          "current_key": "AIzaSyDXZrKx6Lx9rlUXc5NRRiLYUI-McEvoO2I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "912963032866-3vt37i59pvvr4cg68acggjo0e2brcrq0.apps.googleusercontent.com",
+              "client_id": "1030843858197-j8rul1hec3hcnggh8b5u1p5sceer0g5q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
