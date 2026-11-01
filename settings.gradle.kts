@@ -22,5 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "CetisControl"
+rootProject.name = "CetisAsiste"
 include(":app")
+include(":app")
+ 
