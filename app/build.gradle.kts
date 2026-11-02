@@ -1,16 +1,17 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.compose)
     id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "com.cetiscontrol"
+    namespace = "com.cetisasiste"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.cetiscontrol"
+        applicationId = "com.cetisasiste"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -30,23 +31,34 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        compose = true
+    }
 }
 
 dependencies {
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.constraintlayout)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
-    implementation(libs.material)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-
-    // BOM de Firebase
+    debugImplementation(libs.androidx.compose.ui.test.manifest)
+    debugImplementation(libs.androidx.compose.ui.tooling)
     implementation(platform("com.google.firebase:firebase-bom:34.19.0"))
-
-    // Dependencias
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
+    // Dibuja el código QR del alumno a partir de su No. de control.
+    implementation(libs.zxing.core)
+    // Lee el QR con la cámara (escáner del prefecto, ADR-009).
+    implementation(libs.zxing.android.embedded)
+
 }
