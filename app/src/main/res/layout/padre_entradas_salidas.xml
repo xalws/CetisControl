@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Entradas y salidas" del padre (antes EntradasSalidasScreen.kt en Compose).
-     Historial del semestre agrupado por día. El código agrega, por cada día, un
-     comun_item_encabezado y un comun_item_lista por registro. "Ver más" trae los siguientes 20.
-     Variables: nombre del hijo y lista de días con sus registros. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">

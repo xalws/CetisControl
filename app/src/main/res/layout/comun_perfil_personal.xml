@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Perfil del personal (prefecto y profesor). Mismo diseño que "Perfil - Alumno"
-     (Figma 79:1148), con los datos de su cuenta. Pestaña: el botón ☰ abre el menú del rol.
-     Variables: personal.nombre, personal.rol, personal.usuario, personal.correo -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -29,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- ProfileHeader (79:1515) -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -72,7 +68,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Info (79:1522) -->
                 <LinearLayout style="@style/Cetis.Tarjeta">
 
                     <LinearLayout
@@ -109,7 +104,6 @@
                     android:layout_marginTop="@dimen/cetis_space_16"
                     android:text="@string/alumno_perfil_aviso" />
 
-                <!-- Options (79:1533) -->
                 <LinearLayout
                     android:id="@+id/opcion_contrasena"
                     style="@style/Cetis.Opcion"

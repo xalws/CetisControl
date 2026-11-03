@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Inicio" del padre (antes InicioScreen.kt en Compose). Pestaña: el botón ☰ abre el
-     menú del rol. Variables: alumno.nombre, alumno.rol, alumno.grupo (datos del hijo) y
-     el título del anuncio destacado (si no hay, el recuadro guinda no se ve). -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
 
     <LinearLayout style="@style/Cetis.Pantalla.Columna">
 
-        <!-- Header (Figma 79:1300) -->
         <FrameLayout style="@style/Cetis.BarraSuperior">
 
             <ImageView style="@style/Cetis.BarraSuperior.Adorno" />
@@ -46,7 +42,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- ProfileCard · variables: alumno.nombre, alumno.rol, alumno.grupo -->
                 <FrameLayout
                     android:id="@+id/tarjeta_perfil"
                     android:layout_width="match_parent"
@@ -107,31 +102,10 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <!-- Marca de agua: engrane + "61" -->
-                    <ImageView
-                        android:layout_width="84dp"
-                        android:layout_height="84dp"
-                        android:layout_gravity="end|top"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="12dp"
-                        android:importantForAccessibility="no"
-                        android:src="@drawable/img_watermark_gear_card" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end|top"
-                        android:layout_marginTop="54dp"
-                        android:layout_marginEnd="19dp"
-                        android:alpha="0.09"
-                        android:fontFamily="@font/plus_jakarta_sans_bold"
-                        android:importantForAccessibility="no"
-                        android:text="@string/alumno_marca_agua_numero"
-                        android:textColor="@color/cetis_brand_800"
-                        android:textSize="40sp" />
+
                 </FrameLayout>
 
-                <!-- ImportantBanner · variable: título del anuncio destacado -->
                 <FrameLayout
                     android:id="@+id/banner_importante"
                     android:layout_width="match_parent"
@@ -145,15 +119,6 @@
                     android:visibility="gone"
                     tools:visibility="visible">
 
-                    <!-- Engrane decorativo: más alto que la tarjeta, por eso queda recortado -->
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end|top"
-                        android:layout_marginTop="-10dp"
-                        android:layout_marginEnd="20dp"
-                        android:importantForAccessibility="no"
-                        android:src="@drawable/img_watermark_gear_banner" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -213,7 +178,6 @@
                     </LinearLayout>
                 </FrameLayout>
 
-                <!-- SectionLabel -->
                 <LinearLayout style="@style/Cetis.Seccion">
 
                     <View style="@style/Cetis.Seccion.Linea" />
@@ -225,7 +189,6 @@
                     <View style="@style/Cetis.Seccion.Linea" />
                 </LinearLayout>
 
-                <!-- QuickAccessGrid -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Renglón de lista: ícono en un círculo, título y detalle ("ListItemCard" de Figma).
-     Se usa en entradas y salidas, eventos, grupos, salidas de grupo y estatus.
-     Variables: renglon.titulo, renglon.detalle. El ícono, el color del círculo y la flecha
-     (solo en los renglones que se pueden tocar) los pone el código. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

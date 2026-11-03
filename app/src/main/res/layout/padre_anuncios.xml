@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Anuncios" del padre (antes AnunciosScreen.kt en Compose). Pestaña: la barra
-     inferior la pone el código. Las tarjetas son alumno_item_anuncio.xml (AnnouncementCard).
-     Variable: lista de anuncios dirigidos a "padre". -->
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">

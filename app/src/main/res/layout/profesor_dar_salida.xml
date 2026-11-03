@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Dar salida al grupo: el profesor libera al grupo en la última clase del turno.
-     Se guarda en periodos/{semestre}/salidasDeGrupo y el prefecto lo ve en su Inicio.
-     Variables: grupo, fecha de hoy y la última clase del día (materia y horas). -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -90,7 +87,6 @@
                     android:layout_marginTop="@dimen/cetis_space_16"
                     tools:text="@string/profesor_salida_explicacion" />
 
-                <!-- Aviso verde si el grupo ya salió hoy -->
                 <LinearLayout
                     android:id="@+id/aviso_salida"
                     android:layout_width="match_parent"

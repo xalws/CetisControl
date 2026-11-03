@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: componente "AnnouncementCard" (22:232)
-     Variables: anuncio.etiqueta, anuncio.fecha, anuncio.titulo, anuncio.texto -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,7 +15,6 @@
         android:paddingEnd="@dimen/cetis_space_16"
         android:paddingBottom="@dimen/cetis_space_16">
 
-        <!-- Meta -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +64,6 @@
             tools:text="{anuncio.texto}" />
     </LinearLayout>
 
-    <!-- AccentStripe -->
     <View
         android:layout_width="4dp"
         android:layout_height="match_parent"

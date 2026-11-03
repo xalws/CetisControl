@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Una opción del menú lateral (comun_menu.xml): círculo guinda con el ícono y el nombre de
-     la pantalla. La de la pantalla abierta lleva fondo de tarjeta (lo pone el código).
-     Variables: icono y texto de la opción. -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Menu.Opcion"

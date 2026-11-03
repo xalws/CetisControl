@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Menú lateral de las pantallas principales de cada rol (lo abre el botón ☰ de la barra
-     superior; reemplaza a la barra inferior, ADR-007). Arriba, el nombre y el rol de quien
-     inició sesión; en medio, una opción por pantalla principal (comun_item_menu.xml) y
-     "Notificaciones"; hasta abajo, "Cerrar sesión".
-     No trae datos: lo pone encima de la pantalla y lo llena VistasComunes.mostrarMenu.
-     Variables: persona.nombre, persona.rol y la lista de opciones del rol. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/menu"
@@ -18,8 +12,6 @@
     android:orientation="vertical"
     tools:targetApi="31">
 
-    <!-- Encabezado guinda (mismo color y adorno que la barra superior). El código le suma
-         arriba el alto de la barra de estado (hora y batería), que cambia en cada teléfono. -->
     <FrameLayout
         android:id="@+id/encabezado_menu"
         android:layout_width="match_parent"
@@ -79,14 +71,12 @@
             android:orientation="vertical"
             android:padding="@dimen/cetis_space_12">
 
-            <!-- Opciones del rol: las agrega el código, una por pantalla principal -->
             <LinearLayout
                 android:id="@+id/lista_opciones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
-            <!-- Notificaciones: la misma pantalla que abre la campana de Inicio -->
             <LinearLayout
                 android:id="@+id/opcion_notificaciones"
                 style="@style/Cetis.Menu.Opcion"
@@ -104,7 +94,6 @@
                     android:importantForAccessibility="no"
                     android:text="@string/alumno_notificaciones" />
 
-                <!-- Cuántos avisos sin leer hay ("3", "9+"); se oculta si no hay (lo pone el código) -->
                 <TextView
                     android:id="@+id/txt_sin_leer"
                     style="@style/Cetis.Contador"
@@ -117,7 +106,6 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Hasta abajo: cerrar sesión (pregunta antes, con el mismo diálogo que Perfil) -->
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

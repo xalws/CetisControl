@@ -63,14 +63,16 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
+        android:fillViewport="true"
         android:paddingBottom="@dimen/cetis_space_16"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="90dp"
             android:orientation="vertical">
-            <!-- QRCard (79:1151) · variables: alumno.nombre, alumno.rol, alumno.grupo y la imagen del QR -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,7 +100,6 @@
                     android:textColor="@color/cetis_text_secondary"
                     tools:text="{alumno.rol} · Grupo {alumno.grupo}" />
 
-                <!-- QRBox: el código lo genera la app; aquí solo está el espacio de 200 × 200 -->
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

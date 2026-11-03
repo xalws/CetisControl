@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Inicio del prefecto. No hay Figma de este rol: usa el diseño de "Inicio - Alumno"
-     (encabezado, tarjeta de perfil, Accesos Rápidos) y las piezas de "Componentes".
-     Pestaña: el botón ☰ abre el menú del rol.
-     Variables: personal.nombre, la fecha de hoy y la lista de grupos que ya salieron hoy. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
 
     <LinearLayout style="@style/Cetis.Pantalla.Columna">
 
-        <!-- Header (como Figma 79:1300) -->
         <FrameLayout style="@style/Cetis.BarraSuperior">
 
             <ImageView style="@style/Cetis.BarraSuperior.Adorno" />
@@ -47,7 +42,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- ProfileCard · variables: personal.nombre, rol y la fecha de hoy -->
                 <FrameLayout
                     android:id="@+id/tarjeta_perfil"
                     android:layout_width="match_parent"
@@ -105,31 +99,8 @@
                                 tools:text="{hoy}" />
                         </LinearLayout>
                     </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="84dp"
-                        android:layout_height="84dp"
-                        android:layout_gravity="end|top"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="12dp"
-                        android:importantForAccessibility="no"
-                        android:src="@drawable/img_watermark_gear_card" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end|top"
-                        android:layout_marginTop="54dp"
-                        android:layout_marginEnd="19dp"
-                        android:alpha="0.09"
-                        android:fontFamily="@font/plus_jakarta_sans_bold"
-                        android:importantForAccessibility="no"
-                        android:text="@string/alumno_marca_agua_numero"
-                        android:textColor="@color/cetis_brand_800"
-                        android:textSize="40sp" />
                 </FrameLayout>
 
-                <!-- SectionLabel -->
                 <LinearLayout style="@style/Cetis.Seccion">
 
                     <View style="@style/Cetis.Seccion.Linea" />
@@ -141,14 +112,12 @@
                     <View style="@style/Cetis.Seccion.Linea" />
                 </LinearLayout>
 
-                <!-- QuickAccessGrid -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/cetis_space_16"
                     android:orientation="horizontal">
 
-                    <!-- Escanear: abre el escáner (prefecto_escaner.xml) -->
                     <FrameLayout
                         android:id="@+id/card_escanear"
                         style="@style/Cetis.Acceso"
@@ -180,7 +149,6 @@
                         <ImageView style="@style/Cetis.Acceso.Esquina" />
                     </FrameLayout>
 
-                    <!-- Captura por No. de control (prefecto_captura.xml) -->
                     <FrameLayout
                         android:id="@+id/card_no_control"
                         style="@style/Cetis.Acceso">
@@ -280,9 +248,6 @@
                     </FrameLayout>
                 </LinearLayout>
 
-                <!-- Últimos escaneos de hoy, en tiempo real (periodos/{semestre}/registros, ADR-010).
-                     Arriba, el renglón "Alertas de hoy" con cuántas van; al tocarlo se abre
-                     prefecto_alertas.xml. Debajo, un comun_item_lista por escaneo (rojo si tuvo alerta). -->
                 <LinearLayout style="@style/Cetis.Seccion">
 
                     <View style="@style/Cetis.Seccion.Linea" />
@@ -311,7 +276,6 @@
                     android:visibility="gone"
                     tools:visibility="visible" />
 
-                <!-- Salidas de grupo de hoy (periodos/{semestre}/salidasDeGrupo) -->
                 <LinearLayout style="@style/Cetis.Seccion">
 
                     <View style="@style/Cetis.Seccion.Linea" />
@@ -323,7 +287,6 @@
                     <View style="@style/Cetis.Seccion.Linea" />
                 </LinearLayout>
 
-                <!-- Un comun_item_lista por grupo que ya salió -->
                 <LinearLayout
                     android:id="@+id/lista_salidas"
                     android:layout_width="match_parent"

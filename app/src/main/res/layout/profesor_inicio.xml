@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Inicio del profesor. No hay Figma de este rol: usa el diseño de "Inicio - Alumno"
-     (encabezado y tarjeta de perfil) y las piezas de "Componentes".
-     Pestaña: el botón ☰ abre el menú del rol.
-     Variables: personal.nombre, cuántos grupos tiene y la lista de sus grupos
-     (un comun_item_lista por grupo; al tocarlo se abre el grupo). -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
 
     <LinearLayout style="@style/Cetis.Pantalla.Columna">
 
-        <!-- Header (como Figma 79:1300) -->
         <FrameLayout style="@style/Cetis.BarraSuperior">
 
             <ImageView style="@style/Cetis.BarraSuperior.Adorno" />
@@ -48,7 +42,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- ProfileCard · variables: personal.nombre, rol y cuántos grupos tiene -->
                 <FrameLayout
                     android:id="@+id/tarjeta_perfil"
                     android:layout_width="match_parent"
@@ -130,7 +123,6 @@
                         android:textSize="40sp" />
                 </FrameLayout>
 
-                <!-- SectionLabel -->
                 <LinearLayout style="@style/Cetis.Seccion">
 
                     <View style="@style/Cetis.Seccion.Linea" />

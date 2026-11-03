@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Un grupo del profesor: dar salida, ver el horario y la lista de alumnos
-     ("Lista de alumnos" del documento de roles). Cada alumno es un profesor_item_alumno
-     (StudentRow de Figma); al tocarlo se abre su perfil.
-     Variables: nombre del grupo, si ya salió hoy y la lista de alumnos inscritos. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -19,7 +15,6 @@
                     android:id="@+id/btn_regresar"
                     style="@style/Cetis.BarraSuperior.Regresar" />
 
-                <!-- "Grupo 102" (lo pone el código) -->
                 <TextView
                     android:id="@+id/txt_titulo"
                     style="@style/Cetis.BarraSuperior.Titulo"
@@ -31,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- Aviso verde si el grupo ya salió hoy (AlertBanner de Figma, en verde) -->
                 <LinearLayout
                     android:id="@+id/aviso_salida"
                     android:layout_width="match_parent"
@@ -100,7 +94,6 @@
                     <ImageView style="@style/Cetis.Opcion.Flecha" />
                 </LinearLayout>
 
-                <!-- "Alumnos (38)" -->
                 <LinearLayout style="@style/Cetis.Seccion">
 
                     <View style="@style/Cetis.Seccion.Linea" />

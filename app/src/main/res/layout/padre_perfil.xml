@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Perfil" del padre (antes PerfilScreen.kt en Compose): los datos del hijo y las
-     opciones de la cuenta. Pestaña: el botón ☰ abre el menú del rol.
-     Los ids son los de alumno_perfil.xml, así se llena con AlumnoVistas.llenarPerfil.
-     Variables: alumno.nombre, alumno.rol, alumno.grupo, alumno.noControl, alumno.correo -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -30,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- ProfileHeader -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,7 +68,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Info -->
                 <LinearLayout style="@style/Cetis.Tarjeta">
 
                     <LinearLayout
@@ -115,7 +109,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Options -->
                 <LinearLayout
                     android:id="@+id/opcion_credencial"
                     style="@style/Cetis.Opcion"

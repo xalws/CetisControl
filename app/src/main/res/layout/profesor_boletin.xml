@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Boletín de noticias del profesor. Mismo diseño que "Boletin - Alumno" (Figma 79:1218).
-     Pestaña: el botón ☰ abre el menú del rol. Las tarjetas son alumno_item_anuncio.xml.
-     Variable: lista de anuncios dirigidos a "profesor". -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">

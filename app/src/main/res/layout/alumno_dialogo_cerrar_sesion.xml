@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: componente "LogoutDialog" (124:2023) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="296dp"
@@ -43,7 +42,6 @@
         android:gravity="center"
         android:text="@string/alumno_cerrar_sesion_mensaje" />
 
-    <!-- Actions -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

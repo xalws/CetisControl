@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Calendario del plantel (frame "Calendario" de Figma). Lo usan el padre y el prefecto.
-     Pestaña: el botón ☰ abre el menú del rol.
-     Variables: mes (título, días, hoy, días con evento) y la lista de eventos. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -29,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- MonthCard · variable: mes -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -80,7 +76,7 @@
                             android:src="@drawable/ic_chevron_right_dark" />
                     </LinearLayout>
 
-                    <!-- L M M J V S D (el código pone las letras de calendario_weekdays) -->
+                    <!-- L M M J V S D -->
                     <LinearLayout
                         android:id="@+id/dias_semana"
                         android:layout_width="match_parent"
@@ -97,7 +93,7 @@
                         <TextView style="@style/Cetis.Texto.SubtituloTarjeta" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" tools:text="D" />
                     </LinearLayout>
 
-                    <!-- Semanas: el código agrega un renglón de 7 casillas (comun_item_dia) por semana -->
+                    <!-- Semanas -->
                     <LinearLayout
                         android:id="@+id/calendario_semanas"
                         android:layout_width="match_parent"
@@ -110,7 +106,6 @@
                     style="@style/Cetis.Subtitulo"
                     android:text="@string/calendario_upcoming" />
 
-                <!-- Eventos: un comun_item_lista por evento -->
                 <LinearLayout
                     android:id="@+id/lista_eventos"
                     android:layout_width="match_parent"
