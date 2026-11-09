@@ -110,7 +110,7 @@
                     android:background="@null"
                     android:hint="@string/login_no_control_placeholder"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textColorHint="@color/cetis_text_secondary" />
             </LinearLayout>

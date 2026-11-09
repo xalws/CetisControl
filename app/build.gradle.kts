@@ -58,9 +58,11 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
-    // Dibuja el código QR del alumno a partir de su No. de control.
+    implementation("androidx.fragment:fragment-ktx:1.8.5")
+    implementation("androidx.drawerlayout:drawerlayout:1.2.0")
+    implementation("androidx.core:core-splashscreen:1.0.1")
+
     implementation(libs.zxing.core)
-    // Lee el QR con la cámara (escáner del prefecto, ADR-009).
     implementation(libs.zxing.android.embedded)
 
 }

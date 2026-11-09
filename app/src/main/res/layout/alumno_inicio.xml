@@ -65,7 +65,7 @@
                     android:contentDescription="@string/alumno_notificaciones"
                     android:padding="11dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_bell_badge" />
+                    android:src="@drawable/ic_bell" />
             </FrameLayout>
         </FrameLayout>
         <ScrollView
