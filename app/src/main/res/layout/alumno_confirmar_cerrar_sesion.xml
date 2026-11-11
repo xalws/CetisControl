@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Confirmar cerrar sesion - Alumno" (124:1923)
-     Es la pantalla de Perfil con la capa oscura y el diálogo encima. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!-- Overlay rgba(20, 8, 10, 0.6) -->
     <View
         android:id="@+id/overlay"
         android:layout_width="match_parent"

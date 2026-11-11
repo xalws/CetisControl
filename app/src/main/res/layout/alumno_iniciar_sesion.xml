@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Iniciar sesion - Alumno" (124:1876)
-     Solo la vista: el No. de control y la contraseña las escribe la persona;
-     no se valida nada aquí. -->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,7 +13,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Hero -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,7 +27,6 @@
                 android:scaleType="fitStart"
                 android:src="@drawable/bg_login_accent" />
 
-            <!-- 76 dp = zona de la barra de estado (28) + espacio del diseño (48) -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -114,12 +110,11 @@
                     android:background="@null"
                     android:hint="@string/login_no_control_placeholder"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textColorHint="@color/cetis_text_secondary" />
             </LinearLayout>
 
-            <!-- Campo/Contraseña -->
             <TextView
                 style="@style/Cetis.Texto.TituloTarjeta"
                 android:layout_width="wrap_content"

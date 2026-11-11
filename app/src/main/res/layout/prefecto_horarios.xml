@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Horarios de todos los grupos (prefecto). Pestaña: el botón ☰ abre el menú del rol.
-     Arriba se elige el turno; abajo, un comun_item_lista por grupo del semestre en curso.
-     Al tocar un grupo se abre su horario (comun_horario.xml). -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -25,7 +22,6 @@
             </LinearLayout>
         </FrameLayout>
 
-        <!-- Turno elegido (el activo va en guinda; lo marca el código) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

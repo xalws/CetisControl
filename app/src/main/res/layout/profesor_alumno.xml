@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Perfil del alumno visto por el profesor: sus datos, su estado (StatusChip de Figma),
-     el botón para cambiar su estatus y la lista de estatus que ya tiene.
-     Usa el diseño de "Perfil - Alumno" (Figma 79:1148).
-     Variables: alumno.nombre, alumno.grupo, alumno.noControl, alumno.turno, alumno.correo,
-     su estado y la lista de estatus (un comun_item_lista por estatus). -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -31,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- ProfileHeader -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -71,7 +65,6 @@
                             android:textColor="@color/cetis_text_secondary"
                             tools:text="{alumno.rol} · Grupo {alumno.grupo}" />
 
-                        <!-- StatusChip (76:538) -->
                         <LinearLayout
                             android:id="@+id/chip_estado"
                             style="@style/Cetis.Estatus"
@@ -89,7 +82,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Info -->
                 <LinearLayout style="@style/Cetis.Tarjeta">
 
                     <LinearLayout

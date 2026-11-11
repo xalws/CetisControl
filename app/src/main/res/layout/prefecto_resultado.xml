@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Resultado OK - Prefecto" (77:501) y "Resultado alerta - Prefecto" (77:502).
-     Una sola vista para los dos casos: el código cambia colores, ícono y textos.
-     Variables: resultado (entrada o salida, alerta o null, hora), alumno.nombre,
-     alumno.grupo, alumno.noControl y si se avisó al padre. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -55,7 +51,6 @@
                             android:src="@drawable/ic_check_circle" />
                     </FrameLayout>
 
-                    <!-- "Entrada registrada" o el título de la alerta -->
                     <TextView
                         android:id="@+id/txt_resultado"
                         style="@style/Cetis.Texto.TituloNombre"
@@ -68,7 +63,6 @@
                         tools:text="{resultado.titulo}"
                         tools:targetApi="28" />
 
-                    <!-- "Hoy · 7:05 am · Entrada" -->
                     <TextView
                         android:id="@+id/txt_cuando"
                         style="@style/Cetis.Texto.CuerpoChico"
@@ -84,7 +78,6 @@
                         android:layout_marginTop="@dimen/cetis_space_16"
                         android:background="@color/cetis_surface_pill" />
 
-                    <!-- Alumno -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -131,7 +124,6 @@
                                 android:layout_height="wrap_content"
                                 tools:text="{alumno.noControl}" />
 
-                            <!-- Etiqueta roja de la alerta ("Castigo disciplinario") -->
                             <LinearLayout
                                 android:id="@+id/chip_alerta"
                                 style="@style/Cetis.Estatus"
@@ -153,7 +145,6 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <!-- Por qué saltó la alerta ("Control Escolar lo desactivó por pago."); solo con alerta -->
                     <TextView
                         android:id="@+id/txt_motivo"
                         style="@style/Cetis.Texto.Cuerpo"
@@ -164,7 +155,6 @@
                         tools:text="{alerta.motivo}"
                         tools:visibility="visible" />
 
-                    <!-- "Se avisó a su padre…" (verde) o "La alerta quedó guardada…" (rojo) -->
                     <TextView
                         android:id="@+id/txt_aviso"
                         style="@style/Cetis.Texto.Cuerpo"

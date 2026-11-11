@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Escaner - Prefecto" (77:500). Pantalla del menú ☰ del prefecto.
-     Arriba se elige Entrada o Salida; la cámara busca el QR del alumno (lleva
-     "CETIS61:" + su No. de control). Si el QR no se lee, "Escribir No. de control".
-     La cámara es la vista BarcodeView de la librería zxing-android-embedded (ADR-009).
-     Variables: tipo (entrada o salida), el mensaje de estado y si hay permiso de cámara. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla"
@@ -32,7 +27,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- Entrada / Salida (la elegida va en guinda; lo marca el código) -->
                 <LinearLayout style="@style/Cetis.Segmento">
 
                     <TextView
@@ -48,7 +42,6 @@
                         android:text="@string/prefecto_salida" />
                 </LinearLayout>
 
-                <!-- Cámara con el marco de cuatro esquinas y la línea roja -->
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="280dp"
@@ -72,7 +65,6 @@
                         android:layout_gravity="center"
                         android:background="@color/cetis_status_danger" />
 
-                    <!-- Sin permiso de cámara: aviso y botón para pedirlo otra vez -->
                     <LinearLayout
                         android:id="@+id/aviso_permiso"
                         android:layout_width="match_parent"
@@ -118,7 +110,6 @@
                     android:text="@string/prefecto_apunta_camara"
                     android:textColor="@color/cetis_text_on_brand_muted" />
 
-                <!-- "Registrando: Entrada" -->
                 <TextView
                     android:id="@+id/txt_registrando"
                     style="@style/Cetis.Texto.Seccion"
@@ -129,7 +120,6 @@
                     android:textColor="@color/cetis_text_on_brand"
                     tools:text="Registrando: Entrada" />
 
-                <!-- "Buscando al alumno…" o "Ese código no es de CetisAsiste." -->
                 <TextView
                     android:id="@+id/txt_estado"
                     style="@style/Cetis.Texto.Cuerpo"

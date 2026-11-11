@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: "Captura por matricula - Prefecto" (89:859), con "No. de control".
-     Para cuando el QR no se puede leer: el prefecto teclea los 14 dígitos del No. de control.
-     El teclado es propio (KeypadKey de "Componentes"); no abre el teclado del teléfono.
-     Los números de las teclas van escritos aquí (no se traducen), por eso tools:ignore.
-     Variables: tipo (entrada o salida), los dígitos tecleados y el mensaje de error. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla"
@@ -47,7 +42,6 @@
                         android:text="@string/prefecto_salida" />
                 </LinearLayout>
 
-                <!-- Lo que se ha tecleado -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -75,7 +69,6 @@
                         android:textSize="24sp"
                         tools:text="{noControl}" />
 
-                    <!-- Ayuda; si falta algo, aquí sale el error en rojo -->
                     <TextView
                         android:id="@+id/txt_ayuda"
                         style="@style/Cetis.Texto.SubtituloTarjeta"
@@ -85,7 +78,6 @@
                         android:text="@string/prefecto_captura_ayuda" />
                 </LinearLayout>
 
-                <!-- Teclado -->
                 <LinearLayout
                     style="@style/Cetis.FilaDeTeclas"
                     android:layout_marginTop="@dimen/cetis_space_16">

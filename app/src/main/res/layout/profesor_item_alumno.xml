@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: componente "StudentRow" (76:541), página "Componentes"
-     Variables: alumno.iniciales, alumno.nombre, alumno.noControl y su estado
-     (Activo en verde; Inactivo por pago o por salud en rojo). -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +13,6 @@
     android:orientation="horizontal"
     android:padding="@dimen/cetis_space_12">
 
-    <!-- Initials (76:542) -->
     <TextView
         android:id="@+id/txt_iniciales"
         style="@style/Cetis.Texto.TituloTarjeta"
@@ -51,7 +47,6 @@
             android:layout_marginTop="4dp"
             tools:text="{alumno.noControl}" />
 
-        <!-- StatusChip (76:538) -->
         <LinearLayout
             android:id="@+id/chip_estado"
             style="@style/Cetis.Estatus"

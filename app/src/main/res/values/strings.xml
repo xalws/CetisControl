@@ -38,7 +38,7 @@
     <string name="splash_tagline">Control de entradas y salidas</string>
 
     <string name="login_hero_subtitle">Inicia sesión para continuar</string>
-    <string name="login_no_control_placeholder">Ingresa tu No. de control o usuario</string>
+    <string name="login_no_control_placeholder">Ingresa tu No. de control</string>
     <string name="login_password_placeholder">••••••••</string>
     <string name="login_toggle_password">Mostrar u ocultar la contraseña</string>
     <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>

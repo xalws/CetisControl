@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Cambiar estatus: el profesor registra una falta, un reporte, una llamada de atención o un
-     castigo (son los cuatro que le permiten las reglas de Firestore). Se guarda en
-     alumnos/{No. de control}/estatus. Variables: alumno.nombre y su No. de control y grupo. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -29,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- A quién se le pone el estatus -->
                 <LinearLayout style="@style/Cetis.Tarjeta">
 
                     <TextView
@@ -52,7 +48,6 @@
                     style="@style/Cetis.Campo.Titulo"
                     android:text="@string/profesor_estatus_tipo" />
 
-                <!-- Tipos: el elegido va en guinda (lo marca el código) -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -109,7 +104,6 @@
                     android:padding="14dp"
                     android:textColorHint="@color/cetis_text_secondary" />
 
-                <!-- Solo si el estatus elegido se le avisa al padre (configuracion/plantel, ADR-010) -->
                 <TextView
                     android:id="@+id/txt_aviso_padre"
                     style="@style/Cetis.Texto.CuerpoChico"

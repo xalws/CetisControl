@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Notificaciones separadas en "Hoy" y "Anteriores" (frame "Notificaciones" de Figma).
-     La usan el padre, el prefecto y el profesor (se abre con la campana de Inicio).
-     Variables: listas de notificaciones de hoy y anteriores. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -15,8 +12,8 @@
             <LinearLayout style="@style/Cetis.BarraSuperior.Fila">
 
                 <ImageButton
-                    android:id="@+id/btn_regresar"
-                    style="@style/Cetis.BarraSuperior.Regresar" />
+                    android:id="@+id/btn_menu"
+                    style="@style/Cetis.BarraSuperior.Menu" />
 
                 <TextView
                     android:id="@+id/txt_titulo"
@@ -57,7 +54,6 @@
                         android:textColor="@color/cetis_brand_accent" />
                 </LinearLayout>
 
-                <!-- Un comun_item_notificacion por aviso -->
                 <LinearLayout
                     android:id="@+id/lista_hoy"
                     android:layout_width="match_parent"

@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Figma: componente "NotificationItem" (32:399)
-     Variables: notificacion.titulo, notificacion.hora, notificacion.texto.
-     Si no se ha leído, el fondo es más oscuro y sale el punto rojo (lo hace el código). -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

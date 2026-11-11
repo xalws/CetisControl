@@ -35,16 +35,8 @@
             android:paddingStart="@dimen/cetis_space_16"
             android:paddingEnd="@dimen/cetis_space_16">
             <ImageButton
-                android:id="@+id/btn_regresar"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="-6dp"
-                android:layout_marginEnd="2dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/action_back"
-                android:padding="12dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_arrow_left" />
+                android:id="@+id/btn_menu"
+                style="@style/Cetis.BarraSuperior.Menu" />
             <TextView
                 android:id="@+id/txt_titulo"
                 style="@style/Cetis.Texto.TituloNombre"
@@ -63,14 +55,16 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:clipToPadding="false"
+        android:fillViewport="true"
         android:paddingBottom="@dimen/cetis_space_16"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="90dp"
             android:orientation="vertical">
-            <!-- QRCard (79:1151) · variables: alumno.nombre, alumno.rol, alumno.grupo y la imagen del QR -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -98,7 +92,6 @@
                     android:textColor="@color/cetis_text_secondary"
                     tools:text="{alumno.rol} · Grupo {alumno.grupo}" />
 
-                <!-- QRBox: el código lo genera la app; aquí solo está el espacio de 200 × 200 -->
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Cambiar contraseña. La usan todos los roles (Perfil → "Cambiar contraseña").
-     Si la cuenta tiene debeCambiarContrasena = true o su contraseña ya venció, la app la
-     muestra sola al entrar: entonces no hay flecha de regresar, solo "Cerrar sesión".
-     Los campos usan el diseño de "TextField" (Figma 32:423). -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -30,7 +26,6 @@
 
             <LinearLayout style="@style/Cetis.Pantalla.Contenido">
 
-                <!-- Solo cuando el cambio es obligatorio -->
                 <TextView
                     android:id="@+id/txt_obligatoria"
                     style="@style/Cetis.Texto.Cuerpo"
@@ -101,7 +96,6 @@
                         android:inputType="textPassword" />
                 </LinearLayout>
 
-                <!-- Mensaje de error, en rojo (lo pone el código) -->
                 <TextView
                     android:id="@+id/txt_mensaje"
                     style="@style/Cetis.Texto.CuerpoChico"
@@ -118,7 +112,6 @@
                     style="@style/Cetis.Boton"
                     android:text="@string/comun_contrasena_guardar" />
 
-                <!-- Solo cuando el cambio es obligatorio -->
                 <TextView
                     android:id="@+id/txt_cerrar_sesion"
                     style="@style/Cetis.Texto.SubtituloTarjeta"

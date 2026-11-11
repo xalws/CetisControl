@@ -54,7 +54,7 @@
                     android:textColor="@color/cetis_text_on_brand" />
             </LinearLayout>
         </FrameLayout>
-        <!-- AnnouncementList (79:1230) · variable: lista de anuncios -->
+
         <ListView
             android:id="@+id/lista_anuncios"
             android:layout_width="match_parent"

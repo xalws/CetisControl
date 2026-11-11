@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Horario de un grupo, con la flecha para regresar. Mismo diseño que "Horario - Alumno"
-     (Figma 79:1147). La usan el padre (horario de su hijo), el prefecto (cualquier grupo) y
-     el profesor (sus grupos). Los ids son los de alumno_horario.xml, así se llena con
-     AlumnoVistas.llenarHorario. Variables: grupo, día elegido y la lista de clases. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Cetis.Pantalla">
@@ -16,10 +12,9 @@
             <LinearLayout style="@style/Cetis.BarraSuperior.Fila">
 
                 <ImageButton
-                    android:id="@+id/btn_regresar"
-                    style="@style/Cetis.BarraSuperior.Regresar" />
+                    android:id="@+id/btn_menu"
+                    style="@style/Cetis.BarraSuperior.Menu" />
 
-                <!-- "Horario" o "Grupo 102" (lo pone el código) -->
                 <TextView
                     android:id="@+id/txt_titulo"
                     style="@style/Cetis.BarraSuperior.Titulo"
@@ -27,7 +22,6 @@
             </LinearLayout>
         </FrameLayout>
 
-        <!-- Days (79:1449) · el día activo viene de la variable horario.dia -->
         <LinearLayout
             android:id="@+id/dias"
             android:layout_width="match_parent"
