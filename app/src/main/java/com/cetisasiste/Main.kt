@@ -28,11 +28,13 @@ import com.cetisasiste.ui.QrFragment
 
 class Main : AppCompatActivity() {
 
+    // Menu lateral
     private lateinit var drawer: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
+        // contenedor
         setContentView(R.layout.activity_main)
         drawer = findViewById(R.id.drawer)
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
@@ -50,12 +52,12 @@ class Main : AppCompatActivity() {
         }
     }
 
-    //  Navegación
+    //  Suma a la pila
     fun ir(f: Fragment) {
         supportFragmentManager.commit { replace(R.id.contenedor, f); addToBackStack(null) }
     }
 
-    /* Pantalla principal*/
+    // Limpia la pila
     fun irRaiz(f: Fragment) {
         supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         supportFragmentManager.commit { replace(R.id.contenedor, f) }
@@ -83,7 +85,6 @@ class Main : AppCompatActivity() {
                     armarOpciones(rol)
                     drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
                     irRaiz(InicioFragment())
-                    contarSinLeer()
                 },
                 error = ::fallarSesion
             )
@@ -101,7 +102,6 @@ class Main : AppCompatActivity() {
     }
 
     //  Menu hamburgesa
-
     private fun armarOpciones(rol: String) {
         val lista = findViewById<LinearLayout>(R.id.lista_opciones)
         lista.removeAllViews()
@@ -112,7 +112,8 @@ class Main : AppCompatActivity() {
                     Triple("Horario", R.drawable.ic_clock) { irRaiz(HorarioFragment()) },
                     Triple("Boletín", R.drawable.ic_announcements) { irRaiz(BoletinFragment()) },
                     Triple("Código QR", R.drawable.ic_qr) { irRaiz(QrFragment()) },
-                    Triple("Credencial digital", R.drawable.ic_id_card) { irRaiz(CredencialFragment()) }
+                    Triple("Credencial digital", R.drawable.ic_id_card) { irRaiz(CredencialFragment()) },
+                    Triple("Notificaciones", R.drawable.ic_bell) { irRaiz(NotificacionesFragment()) }
                 )
 
             else -> emptyList()
@@ -124,24 +125,11 @@ class Main : AppCompatActivity() {
             item.setOnClickListener { accion() }
             lista.addView(item)
         }
-        findViewById<LinearLayout>(R.id.opcion_notificaciones).setOnClickListener {
-            drawer.closeDrawers(); ir(NotificacionesFragment())
-        }
         findViewById<LinearLayout>(R.id.opcion_cerrar_sesion).setOnClickListener {
             drawer.closeDrawers(); confirmarCerrarSesion()
         }
     }
 
-    /* No leidos. */
-    fun contarSinLeer() {
-        val a = Sesion.alumno ?: return
-        Repo.notificaciones(a.id) { lista ->
-            val n = lista.count { !it.leida }
-            val txt = findViewById<TextView>(R.id.txt_sin_leer)
-            txt.text = n.toString()
-            txt.visibility = if (n > 0) android.view.View.VISIBLE else android.view.View.GONE
-        }
-    }
 
     fun confirmarCerrarSesion() {
         val v = layoutInflater.inflate(R.layout.alumno_dialogo_cerrar_sesion, null)

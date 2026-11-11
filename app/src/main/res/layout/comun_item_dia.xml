@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Una casilla del calendario: el número del día y, abajo, un punto si hay evento.
-     Hoy se pinta con círculo guinda y letra blanca; sábado y domingo, en gris (lo hace el código). -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="0dp"

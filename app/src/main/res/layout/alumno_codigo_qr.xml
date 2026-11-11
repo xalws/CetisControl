@@ -35,16 +35,8 @@
             android:paddingStart="@dimen/cetis_space_16"
             android:paddingEnd="@dimen/cetis_space_16">
             <ImageButton
-                android:id="@+id/btn_regresar"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="-6dp"
-                android:layout_marginEnd="2dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/action_back"
-                android:padding="12dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_arrow_left" />
+                android:id="@+id/btn_menu"
+                style="@style/Cetis.BarraSuperior.Menu" />
             <TextView
                 android:id="@+id/txt_titulo"
                 style="@style/Cetis.Texto.TituloNombre"

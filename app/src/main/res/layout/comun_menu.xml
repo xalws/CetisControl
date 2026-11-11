@@ -77,32 +77,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
-            <LinearLayout
-                android:id="@+id/opcion_notificaciones"
-                style="@style/Cetis.Menu.Opcion"
-                android:contentDescription="@string/alumno_notificaciones">
 
-                <FrameLayout style="@style/Cetis.Opcion.Circulo">
-
-                    <ImageView
-                        style="@style/Cetis.Opcion.Icono"
-                        android:src="@drawable/ic_bell_badge" />
-                </FrameLayout>
-
-                <TextView
-                    style="@style/Cetis.Menu.Texto"
-                    android:importantForAccessibility="no"
-                    android:text="@string/alumno_notificaciones" />
-
-                <TextView
-                    android:id="@+id/txt_sin_leer"
-                    style="@style/Cetis.Contador"
-                    android:layout_marginEnd="@dimen/cetis_space_12"
-                    android:importantForAccessibility="no"
-                    android:visibility="gone"
-                    tools:text="3"
-                    tools:visibility="visible" />
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
