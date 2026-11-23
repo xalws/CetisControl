@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/edit_no_control"
-                android:text="@string/field_no_control" />
+                android:text="@string/field_correo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -108,9 +108,8 @@
                     android:layout_weight="1"
                     android:autofillHints="username"
                     android:background="@null"
-                    android:hint="@string/login_no_control_placeholder"
+                    android:hint="@string/login_correo_placeholder"
                     android:imeOptions="actionNext"
-                    android:inputType="number"
                     android:maxLines="1"
                     android:textColorHint="@color/cetis_text_secondary" />
             </LinearLayout>

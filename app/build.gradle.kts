@@ -61,6 +61,8 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.8.5")
     implementation("androidx.drawerlayout:drawerlayout:1.2.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("com.google.firebase:firebase-messaging")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
     implementation(libs.zxing.core)
     implementation(libs.zxing.android.embedded)

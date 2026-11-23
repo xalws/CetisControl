@@ -46,11 +46,9 @@ object Sesion {
 object Repo {
     private val db get() = FirebaseFirestore.getInstance()
     val auth get() = FirebaseAuth.getInstance()
-    const val DOMINIO = "@cetis61.mx"
 
     fun correoDe(texto: String): String {
-        val t = texto.trim()
-        return if (t.contains("@")) t else t + DOMINIO
+        return texto.trim()
     }
 
     object Roles {

@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.cetisasiste" />
-                  <option name="mobileSdkAppId" value="1:801213728411:android:4857b2e5cf57161a02e83e" />
-                  <option name="projectId" value="appcetis-7c79d" />
-                  <option name="projectNumber" value="801213728411" />
+                  <option name="mobileSdkAppId" value="1:1030843858197:android:aebe00bb5a83ede17ebd1c" />
+                  <option name="projectId" value="cetiscontrol" />
+                  <option name="projectNumber" value="1030843858197" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

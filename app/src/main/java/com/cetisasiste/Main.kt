@@ -1,5 +1,8 @@
 package com.cetisasiste
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
@@ -8,15 +11,20 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
+import com.cetisasiste.data.Fcm
 import com.cetisasiste.data.Repo
+import com.cetisasiste.data.RepoPrefecto
 import com.cetisasiste.data.Sesion
+import com.cetisasiste.data.SesionPrefecto
 import com.cetisasiste.ui.BoletinFragment
 import com.cetisasiste.ui.CredencialFragment
 import com.cetisasiste.ui.HorarioFragment
@@ -24,12 +32,19 @@ import com.cetisasiste.ui.InicioFragment
 import com.cetisasiste.ui.LoginFragment
 import com.cetisasiste.ui.NotificacionesFragment
 import com.cetisasiste.ui.PerfilFragment
+import com.cetisasiste.ui.PrefectoAlertasFragment
+import com.cetisasiste.ui.PrefectoEscanerFragment
+import com.cetisasiste.ui.PrefectoHorariosFragment
+import com.cetisasiste.ui.PrefectoInicioFragment
 import com.cetisasiste.ui.QrFragment
 
 class Main : AppCompatActivity() {
 
     // Menu lateral
     private lateinit var drawer: DrawerLayout
+
+    private val pedirNotif =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -47,10 +62,24 @@ class Main : AppCompatActivity() {
             }
         })
 
+        Fcm.crearCanal(this)
+        pedirPermisoNotificaciones()
+
         if (savedInstanceState == null) {
             if (Repo.auth.currentUser == null) mostrarLogin() else cargarPerfil()
         }
     }
+
+    private fun pedirPermisoNotificaciones() {
+        if (Build.VERSION.SDK_INT >= 33 &&
+            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+            != PackageManager.PERMISSION_GRANTED
+        ) {
+            pedirNotif.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
+    }
+
+
 
     //  Suma a la pila
     fun ir(f: Fragment) {
@@ -84,20 +113,38 @@ class Main : AppCompatActivity() {
                     findViewById<TextView>(R.id.txt_rol).text = alumno.rol
                     armarOpciones(rol)
                     drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+                    Fcm.registrarToken()
                     irRaiz(InicioFragment())
                 },
                 error = ::fallarSesion
             )
             Repo.Roles.PADRE -> Toast.makeText(this, "Pantalla de padre aun no esta lista", Toast.LENGTH_LONG).show()
-            Repo.Roles.PREFECTO -> Toast.makeText(this, "Pantalla de prefecto aun no esta lista", Toast.LENGTH_LONG).show()
+            Repo.Roles.PREFECTO -> RepoPrefecto.cargarPersonal(
+                ok = { personal ->
+                    findViewById<TextView>(R.id.txt_nombre).text = personal.nombre
+                    findViewById<TextView>(R.id.txt_rol).text = "Prefecto"
+                    armarOpciones(rol)
+                    drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+                    Fcm.registrarToken()
+                    Fcm.suscribirPrefecto()
+                    irRaiz(PrefectoInicioFragment())
+                },
+                error = ::fallarSesion
+            )
             Repo.Roles.MAESTRO -> Toast.makeText(this, "Pantalla de maestro aun no esta lista", Toast.LENGTH_LONG).show()
         }
+    }
+
+    private fun limpiarSesion() {
+        Sesion.alumno = null
+        SesionPrefecto.personal = null
+        SesionPrefecto.resultado = null
     }
 
     private fun fallarSesion(mensaje: String) {
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
         Repo.auth.signOut()
-        Sesion.alumno = null
+        limpiarSesion()
         mostrarLogin()
     }
 
@@ -116,8 +163,15 @@ class Main : AppCompatActivity() {
                     Triple("Notificaciones", R.drawable.ic_bell) { irRaiz(NotificacionesFragment()) }
                 )
 
-            else -> emptyList()
-        }
+                Repo.Roles.PREFECTO -> listOf(
+                    Triple("Inicio", R.drawable.ic_home) { irRaiz(PrefectoInicioFragment()) },
+                    Triple("Escanear QR", R.drawable.ic_scan) { irRaiz(PrefectoEscanerFragment()) },
+                    Triple("Horarios", R.drawable.ic_clock) { irRaiz(PrefectoHorariosFragment()) },
+                    Triple("Alertas", R.drawable.ic_bell) { irRaiz(PrefectoAlertasFragment()) }
+                )
+
+                else -> emptyList()
+            }
         opciones.forEach { (texto, icono, accion) ->
             val item = LayoutInflater.from(this).inflate(R.layout.comun_item_menu, lista, false)
             item.findViewById<TextView>(R.id.txt_texto).text = texto
@@ -138,9 +192,12 @@ class Main : AppCompatActivity() {
         v.findViewById<Button>(R.id.btn_cancelar).setOnClickListener { dialogo.dismiss() }
         v.findViewById<Button>(R.id.btn_confirmar).setOnClickListener {
             dialogo.dismiss()
-            Repo.auth.signOut()
-            Sesion.alumno = null
-            mostrarLogin()
+            // Primero se quita el token de este celular
+            Fcm.limpiar {
+                Repo.auth.signOut()
+                limpiarSesion()
+                mostrarLogin()
+            }
         }
         dialogo.show()
     }
